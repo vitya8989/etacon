@@ -302,8 +302,7 @@ body {
   color: #fff
 }
 .btn.btn-red:hover {
-  background: #751414;
-  color: #fff
+  background: #751414
 }
 .btn.btn-next {
   padding: 0 15px 0 0;
@@ -985,6 +984,15 @@ body {
   }
   .ask-price-form__btns {
     margin: 40px 0 0 0
+  }
+  .btn.btn-red:hover {
+    background: #911919
+  }
+  .btn.btn-next:hover {
+    background: url(../img/icons/arrow-right.svg) 84px center/7px 14px no-repeat,#911919
+  }
+  .btn.btn-prev:hover {
+    background: url(../img/icons/arrow-left.svg) 27px center/7px 14px no-repeat,#911919
   }
   .service-prices__content {
     padding: 50px 0 50px 0
