@@ -200,7 +200,8 @@ body {
   line-height: 151.9%;
   color: #636363;
   padding: 19px 27px 17px 61px;
-  position: relative
+  position: relative;
+  cursor: pointer
 }
 .ask-price-form__row label:first-of-type {
   margin: 0 26px 0 0
@@ -291,19 +292,32 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: #b3b1b1;
-  background: #fff
+  background: #fff;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s
 }
 .btn.btn-red {
   background: #911919;
+  color: #fff
+}
+.btn.btn-red:hover {
+  background: #751414;
   color: #fff
 }
 .btn.btn-next {
   padding: 0 15px 0 0;
   background: url(../img/icons/arrow-right.svg) 84px center/7px 14px no-repeat,#911919
 }
+.btn.btn-next:hover {
+  background: url(../img/icons/arrow-right.svg) 84px center/7px 14px no-repeat,#751414
+}
 .btn.btn-prev {
   padding: 0 0 0 15px;
   background: url(../img/icons/arrow-left.svg) 27px center/7px 14px no-repeat,#911919
+}
+.btn.btn-prev:hover {
+  background: url(../img/icons/arrow-left.svg) 27px center/7px 14px no-repeat,#751414
 }
 .btn.btn-next.disabled-btn {
   background: url(../img/icons/arrow-right.svg) 84px center/7px 14px no-repeat,#c4c4c4;
