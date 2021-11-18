@@ -85,7 +85,7 @@ for (let i = 0; i < onlyLetterRus.length; i++) {
 }
 for (let i = 0; i < onlyLetterEng.length; i++) {
 	onlyLetterEng[i].addEventListener('keyup', function () {
-		this.value = this.value.replace(/[^A-Za-z]/ig, '');
+		this.value = this.value.replace(/[а-яё]/ig, '');
 	});
 }
 for (let i = 0; i < telMask.length; i++) {
