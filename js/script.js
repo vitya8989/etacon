@@ -74,3 +74,45 @@ window.onload = function () {
 	reinitSwiper(reviewsSlider);
 }
 ;
+let onlyLetterRus = document.querySelectorAll('.only-letter-rus');
+let telMask = document.querySelectorAll('.tel-mask');
+let onlyLetterEng = document.querySelectorAll('.only-letter-eng');
+
+for (let i = 0; i < onlyLetterRus.length; i++) {
+	onlyLetterRus[i].addEventListener('keyup', function () {
+		this.value = this.value.replace(/[\w]/g, '');
+	});
+}
+for (let i = 0; i < onlyLetterEng.length; i++) {
+	onlyLetterEng[i].addEventListener('keyup', function () {
+		this.value = this.value.replace(/[^A-Za-z]/ig, '');
+	});
+}
+for (let i = 0; i < telMask.length; i++) {
+	telMask[i].addEventListener("input", mask, false);
+}
+function setCursorPosition(pos, elem) {
+	elem.focus();
+	if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+	else if (elem.createTextRange) {
+		var range = elem.createTextRange();
+		range.collapse(true);
+		range.moveEnd("character", pos);
+		range.moveStart("character", pos);
+		range.select()
+	}
+}
+function mask(event) {
+	var matrix = this.defaultValue,
+		i = 0,
+		def = matrix.replace(/\D/g, ""),
+		val = this.value.replace(/\D/g, "");
+	def.length >= val.length && (val = def);
+	matrix = matrix.replace(/[_\d]/g, function (a) {
+		return val.charAt(i++) || "_"
+	});
+	this.value = matrix;
+	i = matrix.lastIndexOf(val.substr(-1));
+	i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf("_");
+	setCursorPosition(i, this)
+};

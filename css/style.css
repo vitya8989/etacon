@@ -190,7 +190,12 @@ body {
   display: none
 }
 .ask-price-form__row label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-flex: 0;
   -ms-flex: 0 1 530px;
   flex: 0 1 530px;
@@ -369,7 +374,8 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: #494949
+  color: #494949;
+  margin: 0 20px 0 0
 }
 .service-prices-block__btns {
   display: -webkit-box;
@@ -377,14 +383,20 @@ body {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 .service-prices-block__price {
   font-size: 16px;
   line-height: 20px;
   color: #494949;
   display: inline-block;
-  margin: 0 23px 0 0
+  margin: 0 23px 0 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 .service-prices-block__btn-booking {
   border: 1px solid #b2b1b1;
@@ -393,7 +405,10 @@ body {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
-  margin: 0 14px 0 0
+  margin: 0 14px 0 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 .service-prices-block__btn-booking:hover {
   border: 1px solid #911919;
@@ -409,7 +424,10 @@ body {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
-  position: relative
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 .service-prices-block__btn-show::after {
   content: "";
@@ -427,9 +445,10 @@ body {
   transition: .2s
 }
 .service-prices-block__btn-show:hover {
-  background: #911919
+  background: #911919;
+  border: 1px solid #911919
 }
-.service-prices-block__btn-show::after:hover {
+.service-prices-block__btn-show:hover::after {
   background: url(../img/icons/arrow-down-wh.svg) 0 0/100% 100% no-repeat
 }
 .service-prices-block__btn-show.active-btn-show::after {
@@ -468,6 +487,9 @@ body {
   display: flex
 }
 .features__row p {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 578.5px;
+  flex: 0 1 578.5px;
   font-size: 16px;
   line-height: 154.9%;
   color: #494949;
@@ -518,7 +540,10 @@ body {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
-  position: relative
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
 }
 .faq-block__btn-show::after {
   content: "";
@@ -536,9 +561,10 @@ body {
   transition: .2s
 }
 .faq-block__btn-show:hover {
-  background: #911919
+  background: #911919;
+  border: 1px solid #911919
 }
-.faq-block__btn-show::after:hover {
+.faq-block__btn-show:hover::after {
   background: url(../img/icons/arrow-down-wh.svg) 0 0/100% 100% no-repeat
 }
 .faq-block__btn-show.active-btn-show::after {
@@ -742,7 +768,13 @@ body {
   min-height: 358px;
   background: #fff;
   border-right: 1px solid #e7e8ea;
-  padding: 35px 14px 35px 34px
+  padding: 35px 14px 35px 34px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 25%;
+  flex: 0 1 25%
+}
+.additional-item a {
+  display: block
 }
 .additional-item__img {
   width: 73px;
@@ -1022,9 +1054,10 @@ body {
     background: #fff
   }
   .service-prices-block__btn-show:hover {
-    background: #fff
+    background: #fff;
+    border: 1px solid #b2b1b1
   }
-  .service-prices-block__btn-show::after:hover {
+  .service-prices-block__btn-show:hover::after {
     background: url(../img/icons/arrow-down-grey.svg) 0 0/100% 100% no-repeat
   }
   .service-prices-block__body p {
@@ -1055,9 +1088,10 @@ body {
     padding: 25px 20px
   }
   .faq-block__btn-show:hover {
-    background: #fff
+    background: #fff;
+    border: 1px solid #b2b1b1
   }
-  .faq-block__btn-show::after:hover {
+  .faq-block__btn-show:hover::after {
     background: url(../img/icons/arrow-down-grey.svg) 0 0/100% 100% no-repeat
   }
   .faq-block__body p {
@@ -1193,18 +1227,10 @@ body {
   }
   .service-prices-block__price {
     font-size: 14px;
-    margin: 0 10px 0 0;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto
+    margin: 0 10px 0 0
   }
   .service-prices-block__btn-booking {
     height: 32px
-  }
-  .service-prices-block__btn-show {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto
   }
   .service-prices-block__body p {
     font-size: 13px
@@ -1215,11 +1241,6 @@ body {
   .faq-block__title {
     font-size: 16px;
     line-height: 20px
-  }
-  .faq-block__btn-show {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto
   }
   .faq-block__body p {
     font-size: 13px
