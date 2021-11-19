@@ -748,10 +748,11 @@ body {
 }
 .reviews-slider__controls .reviews-slider__btn-next.swiper-button-next:hover,
 .reviews-slider__controls .reviews-slider__btn-prev.swiper-button-prev:hover {
-  background: #911919
+  background: #911919;
+  border: 1px solid #911919
 }
-.reviews-slider__controls .reviews-slider__btn-next.swiper-button-next::after:hover,
-.reviews-slider__controls .reviews-slider__btn-prev.swiper-button-prev::after:hover {
+.reviews-slider__controls .reviews-slider__btn-next.swiper-button-next:hover::after,
+.reviews-slider__controls .reviews-slider__btn-prev.swiper-button-prev:hover::after {
   background: url(../img/icons/arrow-down-wh.svg) 0 0/100% 100% no-repeat
 }
 .additional__content {
@@ -1122,10 +1123,11 @@ body {
   }
   .reviews-slider__controls .reviews-slider__btn-next.swiper-button-next:hover,
   .reviews-slider__controls .reviews-slider__btn-prev.swiper-button-prev:hover {
-    background: #fff
+    background: #fff;
+    border: 1px solid #b2b1b1
   }
-  .reviews-slider__controls .reviews-slider__btn-next.swiper-button-next::after:hover,
-  .reviews-slider__controls .reviews-slider__btn-prev.swiper-button-prev::after:hover {
+  .reviews-slider__controls .reviews-slider__btn-next.swiper-button-next:hover::after,
+  .reviews-slider__controls .reviews-slider__btn-prev.swiper-button-prev:hover::after {
     background: url(../img/icons/arrow-down-grey.svg) 0 0/100% 100% no-repeat
   }
   .additional__content {
